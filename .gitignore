@@ -1,0 +1,19 @@
+# Dependências
+node_modules/
+venv/
+.env
+
+# Logs
+*.log
+logs/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/

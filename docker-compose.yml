@@ -1,0 +1,20 @@
+services:
+  lottery-app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - EMAIL=ricardovalor100@gmail.com
+      - FLASK_ENV=development
+    volumes:
+      - .:/app
+
+  lottery-db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: lottery
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+
+  redis-cache:
+    image: redis:alpine
